@@ -11,11 +11,13 @@
                 <div class="card mb-5">
                     <img src="{{$comic->thumb}}" class="card-img-top" alt="{{$comic->title}}">
                     <div class="card-body">
-                    <h4 class="card-title">{{$comic->title}}</h4>
-                    <p class="card-text">{{$comic->description}}</p>
-                    <h5 class="card-text">{{$comic->price}} $</h5>
-                    <h5 class="card-text">{{$comic->sale_date}}</h5>
-                    <h5 class="card-text">{{$comic->type}}</h5>
+                        <a href="{{ route('comics.show', $comic->id) }}">
+                            <h4 class="card-title">{{$comic->title}}</h4>
+                        </a>
+                        <p class="card-text">{{$comic->description}}</p>
+                        <h5 class="card-text">{{$comic->price}} $</h5>
+                        <h5 class="card-text">{{$comic->sale_date}}</h5>
+                        <h5 class="card-text">{{ ucfirst($comic->type) }}</h5>
                     </div>
                 </div>
             </div>

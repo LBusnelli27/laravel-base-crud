@@ -13,5 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/comics', 'ComicController@index');
-Route::get('/comics/{id}', 'ComicController@show');
+//Route::get('/comics', 'ComicController@index');
+//Route::get('/comics/{id}', 'ComicController@show');
+
+Route::prefix('comics')
+->name('comics.')
+->group(function () {
+    Route::get('', 'ComicController@index')->name('index');
+    Route::get('/{id}', 'ComicController@show')->name('show');
+});
