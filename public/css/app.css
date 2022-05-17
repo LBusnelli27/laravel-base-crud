@@ -12173,3 +12173,7 @@ fieldset:disabled .btn {
   }
 }
 
+form input {
+  width: 15rem;
+}
+

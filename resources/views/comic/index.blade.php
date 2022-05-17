@@ -6,6 +6,11 @@
     <div class="container-fluid">
         <h1 class="text-center mb-5">Comics</h1>
         <div class="row p-3">
+            <div class="col-12 mb-5 text-end">
+                <a href="{{ route('comics.create')}}">
+                    <button type="button" class="btn btn-success">Add comic</button>
+                </a>
+            </div>
             @foreach ($comics as $comic)
             <div class="col-2">
                 <div class="card mb-5">
