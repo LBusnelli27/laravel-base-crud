@@ -4,7 +4,7 @@
 
 @section('main-content')
     <div class="container-fluid">
-        <h1 class="text-center mb-5">Ecco tutti i treni disponibili</h1>
+        <h1 class="text-center mb-5">Comics</h1>
         <div class="row p-3">
             @foreach ($comics as $comic)
             <div class="col-2">
